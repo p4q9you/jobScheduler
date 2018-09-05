@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>Jexcel - Javascript spreadsheet</title>
+<meta name='author' content='Paul Hodel'>
+<meta itemprop='keywords' name='keywords' content='Jexcel, jquery, javascript, excel-like, spreadsheet, HTML, jquery plugin, table, grid'>
+<meta itemprop='description' property='og:description' name='description' content='Jexcel is a jquery and javascript plugin you can use to embedded an excel-like spreadsheet in your website and applications.'>
+<meta property='og:title' content='Jexcel - Javascript spreadsheet plugin'>
+<meta name='viewport' id="viewport" content='width=device-width,initial-scale=1,user-scalable=no' />
+<meta name='format-detection' content = "telephone=yes" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<meta name=viewport content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="fNDemv4nALjUDIqXc7xPfHDEV24wtpD9xsEKLkTIYSk" />
+
+<meta itemprop="name" content="jExcel - the JavaScript plugin to create a excel like embeddable spreadsheet">
+<meta itemprop="image" content="http://bossanova.uk/templates/default/img/logo-jexcel.png">
+<meta itemprop="url" content="http://bossanova.uk/jexcel">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="jExcel">
+<meta property="og:url" content="http://bossanova.uk/jexcel">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="http://bossanova.uk/templates/default/img/logo-jexcel.png">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="icon" href="http://bossanova.uk/templates/default/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans|Roboto|Dosis">
+<link rel="stylesheet" href="http://bossanova.uk/templates/default/css/style.css" type="text/css" />
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+<script src="../dist/js/jquery.jexcel.js"></script>
+<script src="../dist/js/jquery.jcalendar.js"></script>
+<link rel="stylesheet" href="../dist/css/jquery.jexcel.css" type="text/css" />
+<link rel="stylesheet" href="../dist/css/jquery.jcalendar.css" type="text/css" />
+
+</head>
+<body>
+
+<div class='container'>
+
+    <div class='row top'>
+
+        <div class='column'><a href="http://bossanova.uk/jexcel"><img src="http://bossanova.uk/templates/default/img/logo-jexcel.png"></a></div>
+        <div class='column'>
+
+            <div id='menu'><div class='description' itemprop='description'></div><ul class='folder'><li><a href='http://bossanova.uk/jexcel'>jExcel website</a></li><li><a href='http://bossanova.uk/jexcel/docs'>Online Documentation</a></li><li><a href='index.html'>Examples</a></li></ul></div>
+
+        </div>
+        <div class='column'>
+
+            <div id='search'></div>
+
+        </div>
+    </div>
+
+    <div class='row content'>
+
+        <div class='column' style='max-width:300px;padding:50px;padding-top:0px;' id='content_left'>
+
+            <div id='content-left'>
+
+                <ul>
+                    <li onclick="window.open('multiple-spreadsheets-in-the-same-page.html', '_top')"><a href="multiple-spreadsheets-in-the-same-page.html" alt="Create multiple instances in the same page">Multiple instances</a><br><span>Using multiple tables in the same application</span></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class='column' style='margin-right:60px;min-width:280px;max-width:780px;text-align:justify;'>
+
+            <div id='content'>
+
+<div class='title'>Using multiple spreadshets</div>
+<p>How to embbed multiple spreadsheets in the same page.</p>
+ 
+<div id="my1"></div><br>
+<div id="my2"></div>
+
+<script>
+var data1 = $.fn.jexcel('helper', { action:'createEmptyData', cols:8, rows:4 });
+var data2 = $.fn.jexcel('helper', { action:'createEmptyData', cols:8, rows:4 });
+
+$('#my1').jexcel({
+    data:data1,
+    contextMenu:function() {
+        console.log(1);
+    }
+});
+$('#my2').jexcel({
+    data:data2,
+    contextMenu:function() {
+        console.log(2);
+    }
+});
+</script>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
