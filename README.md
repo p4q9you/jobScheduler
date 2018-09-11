@@ -5,7 +5,7 @@
 
 - 処理日を自動入力
 - 処理日を元に日付と曜日を表として生成
-- Better CRUDS and beautiful UI
+- JSONファイルから管理対象データを取得して表にマッピング
 - Compatibility with excel, just copy and paste
 - Powerful customizations
 
