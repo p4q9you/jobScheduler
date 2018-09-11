@@ -19,112 +19,37 @@
 <meta property="og:url" content="http://bossanova.uk/jexcel">
 <meta property="og:locale" content="en_GB">
 <meta property="og:image" content="http://bossanova.uk/templates/default/img/logo-jexcel.png">
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 <link rel="icon" href="http://bossanova.uk/templates/default/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans|Roboto|Dosis">
 <link rel="stylesheet" href="http://bossanova.uk/templates/default/css/style.css" type="text/css" />
 
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-
-<script src="../dist/js/jquery.jexcel.js"></script>
-<script src="../dist/js/jquery.jcalendar.js"></script>
+<script src="../dist/js/initCalendar.js"></script>
 <link rel="stylesheet" href="../dist/css/jquery.jexcel.css" type="text/css" />
 <link rel="stylesheet" href="../dist/css/jquery.jcalendar.css" type="text/css" />
+<link rel="stylesheet" href="../dist/css/default.css" type="text/css" />
 
 </head>
 <body>
 
 <div class='container'>
-
-    <div class='row top'>
-
-        <div class='column'><a href="http://bossanova.uk/jexcel"><img src="http://bossanova.uk/templates/default/img/logo-jexcel.png"></a></div>
-        <div class='column'>
-
-            <div id='menu'><div class='description' itemprop='description'></div><ul class='folder'><li></li><li></li><li></li></ul></div>
-
-        </div>
-        <div class='column'>
-
-            <div id='search'></div>
-
-        </div>
-    </div>
-
     <div class='row content'>
-
-        <div class='column' style='max-width:300px;padding:80px;padding-top:0px;' id='content_left'>
-
-            <div id='content-left'>
-
-                <ul>
-                    <li>１：<input></li>
-                    <li>２：<input></li>
-                    <li>３：<input></li>
-                    <li>４：<input></li>
-                    <li>５：<input></li>
-                    <li>６：<input></li>
-                </ul>
-
-            </div>
-        </div>
         <div class='column' style='margin-right:60px;min-width:280px;max-width:780px;text-align:justify;'>
-
             <div id='content'>
-
 <div class='title'>Job Scheduler</div>
 
 <p>ジョブスケジュール管理ツール</p><br>
-
-<div id="my"></div>
-
-<script>
-
-var now   = new Date(); 
-var year = now.getFullYear(); 
-var  month = ("0"+(now.getMonth() + 1)).slice(-2);
-var  date =  ("0"+now.getDate()).slice(-2);
-
-var nowYmd = year + "-" + month + "-" + date;
-
-data = [
-    ['ジョブA', 'JOB001', '1', 1, nowYmd],  
-    ['ジョブB', 'JOB002', '2', 1, nowYmd],
-    ['ジョブC', 'JOB003', '3', 1, nowYmd],
-    ['ジョブD', 'JOB004', '1', 0, nowYmd],
-    ['ジョブE', 'JOB004', '2', 0, nowYmd],
-    ['ジョブF', 'JOB004', '3', 0, nowYmd],
-    ['ジョブG', 'JOB004', '4', 0, nowYmd],
-    ['ジョブH', 'JOB004', '1', 0, nowYmd],
-    ['ジョブI', 'JOB004', '1', 0, nowYmd],
-    ['ジョブJ', 'JOB004', '2', 0, nowYmd],
-    ['ジョブK', 'JOB004', '3', 0, nowYmd],
-    ['ジョブL', 'JOB004', '1', 0, nowYmd],
-    ['ジョブM', 'JOB004', '2', 0, nowYmd],
-];
-
-$('#my').jexcel({
-    data:data,
-    colHeaders:  [ '機能名称', '機能ID', '実施時間', 'Stock', '対象日' ],
-    colWidths: [ 80, 80, 80, 80, 80 ],
-    columns: [
-        { type: 'text' },
-        { type: 'text' },
-        { type: 'dropdown', source:[ {'id':'1', 'name':'●'}, {'id':'2', 'name':'◯'}, {'id':'3', 'name':''} ] },
-        { type: 'checkbox' },
-        { type: 'calendar'},
-    ]
-});
-</script>
-
-
+<p id="executeYmd"></p><br>
+<table>
+    <thead id="theadId">
+    </thead>
+    <tbody id="tbodyId">
+    </tbody>
+  </table>
             </div>
         </div>
     </div>
-
 </div>
-
 </body>
 </html>
