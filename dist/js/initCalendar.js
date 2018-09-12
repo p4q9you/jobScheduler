@@ -105,7 +105,12 @@ var mappingTable = function(list,columnCount){
             }else{
                 var conpareDay = k-2;
                 if(conpareDay === element.executeDay){
-                    daysTdElement.innerHTML = "〇";
+                    if(element.executeTime === "l"){
+                        daysTdElement.innerHTML = "〇";
+                    }else if(element.executeTime === "n"){
+                        daysTdElement.innerHTML = "●";
+                    }
+                    
                 }else{
                     daysTdElement.innerHTML = "";
                 }
@@ -115,4 +120,13 @@ var mappingTable = function(list,columnCount){
         tableBodyElement.appendChild(trElement);
     }
 
+    //const data = {
+    //    name: 'diwao',
+    //    url: 'http://diwao.com'
+    //  };
+      const url = "data:application/octet-stream," + encodeURIComponent(JSON.stringify(list));
+      var link = document.getElementById("downloadLink")
+      var date = new Date();
+      link.download = date.getFullYear().toString() + ("0" + (date.getMonth() + 1 ).toString()).slice(-2)+ ("0" + date.getDay().toString()).slice(-2) + ("0" + date.getHours().toString()).slice(-2) + "_checkResult.json";
+      link.href =url;
 }
