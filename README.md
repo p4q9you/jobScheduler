@@ -1,21 +1,15 @@
 
-[**Žd—l**]
+[**ä»•æ§˜**]
 
-## ‰Šúˆ—
+## UI
+- ãƒ˜ãƒƒãƒ€ãƒ¼ï¼ˆåŸºæº–æ—¥ï¼‰å›ºå®š
+- 
+## åˆæœŸå‡¦ç†
 
-- ˆ—“ú‚ðŽ©“®“ü—Í
-- ˆ—“ú‚ðŒ³‚É“ú•t‚Æ—j“ú‚ð•\‚Æ‚µ‚Ä¶¬
-- JSONƒtƒ@ƒCƒ‹‚©‚çŠÇ—‘ÎÛƒf[ƒ^‚ðŽæ“¾‚µ‚Ä•\‚Éƒ}ƒbƒsƒ“ƒO
-- TABLE‚Å•ÒW‚µ‚½“à—e‚ðƒ†[ƒU‚Ì‘€ì‚È‚µ‚Å•Û‘¶
-- Powerful customizations
-
-## Official Installation
-
-- [Download ZIP](https://github.com/paulhodel/jexcel/archive/master.zip)
-
-### Basic demo
-
-It is very easy to use jExcel, first you should make you have include the jquery core and jexcel JS and CSS style.
+- å‡¦ç†æ—¥ã‚’è‡ªå‹•å…¥åŠ›
+- å‡¦ç†æ—¥ã‚’å…ƒã«æ—¥ä»˜ã¨æ›œæ—¥ã‚’è¡¨ã¨ã—ã¦ç”Ÿæˆ
+- ä¼‘æ—¥ç¥æ—¥åˆ—ã®è‰²å¤‰ãˆ
+- åŸºæº–æ—¥ã¨JSONã®è¨ˆç®—å¼ã‹ã‚‰è¡¨ã«ãƒžãƒƒãƒ”ãƒ³ã‚°
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
