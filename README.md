@@ -9,7 +9,7 @@
 - 処理日を自動入力
 - 処理日を元に日付と曜日を表として生成
 - 休日祝日列の色変え
-- 基準日とJSONの計算式から表にマッピング
+- 入力しておいた基準日とJSONの計算式から表にマッピング
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
