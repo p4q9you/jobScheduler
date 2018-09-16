@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TEST</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/holiday.js"></script>
+    <script src="js/settingDate.js"></script>
+    <script src="js/util.js"></script>
+</head>
+<body>
+    <script>
+        let execResultLog = new Array();
+        const calculateExecDay = (element) => {
+            let replaceResult = replaceExecDay(element);
+            execResultLog.push(formatByArr("置き換え結果は{0}です",replaceResult));
+            let elementList = replaceResult.split("-");
+            execResultLog.push(formatByArr("実行日は{0}です。",getExecBusinessDay(parseInt(elementList[0]),parseInt(elementList[1]))));
+        }
+
+        const replaceExecDay = (target) =>{
+            let replaceResult;
+            for(let key in getSettingDate()){
+                execResultLog.push(formatByArr("{0}に{1}で置き換えを行います。",target,getSettingDate()[key]));
+                if(target.match(key)){
+                    replaceResult =  target.replace(key,getSettingDate()[key]);
+                }
+            }
+            return replaceResult;
+        }
+
+        const targetYmd = new Date();
+        const targetYear = targetYmd.getFullYear();
+        const targetMonth = targetYmd.getMonth() + 1;
+        const targetDate = targetYmd.getDate();
+        execResultLog.push(formatByArr("{0}年{1}月", targetYear, targetMonth));
+
+        // 月の日数
+        let targetMonthDayCount = getTargetMonthDayCount(targetYear, targetMonth);
+        execResultLog.push(formatByArr("今月は{0}日です。", targetMonthDayCount));
+
+        // 月の土日一覧
+        let targetHoliday = getHolidayList(targetYear, targetMonth);
+        execResultLog.push(formatByArr("今月の休日は{0}日です。", targetHoliday));
+
+        // 月の祝日一覧
+        let targetPublicHoliday = getFormatedPublicHolidayList(targetYear, targetMonth);
+        execResultLog.push(formatByArr("今月の祝日は{0}日です。", targetPublicHoliday));    
+
+        // 月の土日と祝日の一覧
+        let allHolidayList = getAllHolidayList(targetYear, targetMonth);
+        execResultLog.push(formatByArr("今月の休日・祝日は{0}日です。",allHolidayList )); 
+
+        // 月の営業日一覧
+        let businessDayList = getBusinessDayList(targetYear, targetMonth);
+        execResultLog.push(formatByArr("今月の営業日は{0}日です。",businessDayList )); 
+
+        // 営業日基準の除算
+        let execDay = "date4-7";
+        calculateExecDay(execDay);
+        execResultLog.push(getExecBusinessDay(27,6));
+
+
+        // テスト用ログ出力
+        for(let element of execResultLog){
+            let newElement = document.createElement("p");
+            newElement.innerHTML = element;
+            document.body.appendChild(newElement);
+        }
+    </script>
+</body>
+</html>
