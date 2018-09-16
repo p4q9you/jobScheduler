@@ -1,74 +1,14 @@
 
-[**d—l**]
+[**ä»•æ§˜**]
 
 ## UI
-- ƒwƒbƒ_[iŠî€“újŒÅ’è
+- ãƒ˜ãƒƒãƒ€ãƒ¼ï¼ˆåŸºæº–æ—¥ï¼‰å›ºå®š
 - 
-## ‰Šúˆ—
+## åˆæœŸå‡¦ç†
 
-- ˆ—“ú‚ğ©“®“ü—Í
-- ˆ—“ú‚ğŒ³‚É“ú•t‚Æ—j“ú‚ğ•\‚Æ‚µ‚Ä¶¬
-- ‹x“új“ú—ñ‚ÌF•Ï‚¦
-- “ü—Í‚µ‚Ä‚¨‚¢‚½Šî€“ú‚ÆJSON‚ÌŒvZ®‚©‚ç•\‚Éƒ}ƒbƒsƒ“ƒO
+- å‡¦ç†æ—¥ã‚’è‡ªå‹•å…¥åŠ›
+- å‡¦ç†æ—¥ã‚’å…ƒã«æ—¥ä»˜ã¨æ›œæ—¥ã‚’è¡¨ã¨ã—ã¦ç”Ÿæˆ
+- ä¼‘æ—¥ç¥æ—¥åˆ—ã®è‰²å¤‰ãˆ
+- å…¥åŠ›ã—ã¦ãŠã„ãŸåŸºæº–æ—¥ã¨JSONã®è¨ˆç®—å¼ã‹ã‚‰è¡¨ã«ãƒãƒƒãƒ”ãƒ³ã‚°
 
-```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jexcel/1.3.7/js/jquery.jexcel.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jexcel/1.3.7/css/jquery.jexcel.css" type="text/css" />
-```
-
-You should initiate your table based on a div container, such as:
-```html
-<div id="mytable"></div>
-```
-
-To initialize a jExcel table you should run a javascript, such as:
-```javascript
-data = [
-    ['Google', 1998, 807.80],
-    ['Apple', 1976, 116.52],
-    ['Yahoo', 1994, 38.66],
-];
-
-$('#mytable').jexcel({ data:data, colWidths: [ 300, 80, 100 ] });
-```
-
-## Examples
-
-- [Creating a table from an external CSV file](https://bossanova.uk/jexcel/examples/creating-a-table-from-an-external-csv-file)
-- [Calendar column type](https://bossanova.uk/jexcel/examples/using-a-calendar-column-type)
-- [Sorting by column](https://bossanova.uk/jexcel/examples/reorder)
-- [Multiple spreadsheets in the same page](https://bossanova.uk/jexcel/examples/multiple-spreadsheets-in-the-same-page)
-- [Integrating a third party plugin into jExcel](https://bossanova.uk/jexcel/examples/integrating-a-third-party-plugin-into-your-spreadsheet)
-- [Currency and masking numbers](https://bossanova.uk/jexcel/examples/currency-and-masking-numbers)
-- [Working with dropdowns](https://bossanova.uk/jexcel/examples/working-with-dropdowns)
-- [Handling events](https://bossanova.uk/jexcel/examples/tracking-changes-on-the-spreadsheet)
-- [Including formulas on your spreadsheet](http://www.bossanova.uk/jexcel/examples/including-formulas-on-your-spreadsheet)
-- [Remote updates](http://www.bossanova.uk/jexcel/examples/remote-updates)
-
-## Official website
-- [jExcel Official](https://bossanova.uk/jexcel)
-
-## Screenshot
-<p align="center">
-<img src="https://bossanova.uk/templates/default/img/jexcel.gif" align="center" alt="jExcel | The javascript spreadsheet | jquery plugin"/>
-</p>
-
-## Community
-- [GitHub](https://github.com/paulhodel/jexcel/issues)
-
-## Limitations and roadmap
-We are working hard to create a better plugin, but jExcel is under development. We would love to hear your ideas to make a better plugin. We are glad to say new features are coming every day, and we are currently working in features such as:
-
-- Merged cells
-- Multiple tabs
-- Drag columns
-- Big data (partial table loading)
-- Pagination
-- Online work collaboration
-
-More suggestions are welcome. Please send your comments in our Github page.
-
-## Copyright and license
-jExcel is released under the [MIT license]. Copyrights belong to Paul Hodel <paul.hodel@gmail.com>
