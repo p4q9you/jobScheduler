@@ -6,29 +6,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/holiday.js"></script>
+    <script src="js/calculate.js"></script>
     <script src="js/settingDate.js"></script>
     <script src="js/util.js"></script>
 </head>
 <body>
     <script>
         let execResultLog = new Array();
-        const calculateExecDay = (element) => {
-            let replaceResult = replaceExecDay(element);
-            execResultLog.push(formatByArr("置き換え結果は{0}です",replaceResult));
-            let elementList = replaceResult.split("-");
-            execResultLog.push(formatByArr("実行日は{0}です。",getExecBusinessDay(parseInt(elementList[0]),parseInt(elementList[1]))));
-        }
-
-        const replaceExecDay = (target) =>{
-            let replaceResult;
-            for(let key in getSettingDate()){
-                execResultLog.push(formatByArr("{0}に{1}で置き換えを行います。",target,getSettingDate()[key]));
-                if(target.match(key)){
-                    replaceResult =  target.replace(key,getSettingDate()[key]);
-                }
-            }
-            return replaceResult;
-        }
 
         const targetYmd = new Date();
         const targetYear = targetYmd.getFullYear();
@@ -56,7 +40,7 @@
         let businessDayList = getBusinessDayList(targetYear, targetMonth);
         execResultLog.push(formatByArr("今月の営業日は{0}日です。",businessDayList )); 
 
-        // 営業日基準の除算
+        // 営業日基準の計算
         let execDay = "date4-7";
         calculateExecDay(execDay);
         execResultLog.push(getExecBusinessDay(27,6));

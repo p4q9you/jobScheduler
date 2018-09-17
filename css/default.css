@@ -1,9 +1,19 @@
-.topbar {
-  background: #fff;
-  position: fixed;
-  z-index: 1000;
-  width:100%;
+@media print{ 
+    .topbar {
+        background: #fff;
+        width:100%;
+}}
+@media screen{ 
+    .topbar {
+      background: #fff;
+      position: fixed;
+      z-index: 1000;
+      width:100%;
+    }
+
 }
+
+
 #mainContent{
   top:250px;
   position:absolute;
