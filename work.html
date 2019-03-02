@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Job Scheduler</title>
+    <link rel="stylesheet" href="css/work.css" type="text/css" />
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=100%">
+    <!-- Job List分-->
+
+    <script src="js/calculate.js"></script>
+    <script src="js/settingDate.js"></script>
+    <script src="js/initialize.js"></script>
+    <script src="js/holiday.js"></script>
+
+    <script src="js/util.js"></script>
+    <script src="js/work.js"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div id="shellElement">
+        <div id="allElement">
+            <!--<form action="jobList.html" method="post">-->
+            <div id="workSetDiv">
+                <h1>Setting Work</h1>
+                <h5 id="loginUser"></h5>
+                <table id="settingTable"></table>
+                <!-- 開発時、typeをbuttonにすることでsubmitを回避する。type="button" -->
+                <!--<button onclick="postSettingValue()" >Next</button>-->
+                <button id="settingButton" onclick="changeForm()">Next</button>
+            </div>
+            <div id="jobListDiv" style="display:none">
+
+                <p id="executeYmd"></p>
+
+                <div id="mainContent">
+                    <table>
+                        <thead id="theadId">
+                        </thead>
+                        <tbody id="tbodyId" contenteditable="true">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

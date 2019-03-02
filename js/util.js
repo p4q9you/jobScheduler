@@ -1,4 +1,8 @@
 "use strict";
+
+// 共通ヘッダー
+$(function(){$("#header").load("./header-templete.html");});
+      
 /**
  * 曜日リストを取得
  * @return 曜日List
@@ -87,7 +91,8 @@ const getHolidayList = (targetYear,targetMonth)=>{
 const getFormatedPublicHolidayList = (targetYear,targetMonth)=>{
     let publicHolidayList = new Array();
     for(let i = 1;i <= getTargetMonthDayCount(targetYear,targetMonth);i++){
-        if(isPublicHoliday(new Date(targetYear, targetMonth, i))){
+        // 12月をDateにnewすると0月になる。
+        if(isPublicHoliday(new Date(targetYear, targetMonth === 12?targetMonth+1:targetMonth, i))){
             publicHolidayList.push(i);
         }
     }
@@ -128,4 +133,78 @@ function formatByArr(msg){
     return msg.replace(/\{(\d+)\}/g, function (m, k) {
         return args[k];
     });
+}
+// apiのテスト
+function apiGet(){
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET','http://localhost:37326/testApi/web/mainApi/get?input=input');
+    xhr.send();
+    xhr.addEventListener('load', function(result){
+      var element = document.getElementById("targetH1");
+      element.innerText = result.target.responseText;
+    });
+}
+function doApiGet(content){
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET','http://localhost:7870/api/?userName=' + content);
+    xhr.send();
+}
+function doApiPost(content){
+    let inputData = {content};
+    //let jsonData = JSON.stringify(inputData);
+
+    let xmlHttpRequest = new XMLHttpRequest();
+    xmlHttpRequest.addEventListener('load', () => {
+        console.log("success");
+      });
+    xmlHttpRequest.open( 'GET', 'http://localhost:7870/api/');
+
+    xmlHttpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    // データをリクエスト ボディに含めて送信する
+    xmlHttpRequest.send("content=" + content);
+
+}
+// HTMLフォームの形式にデータを変換する
+function EncodeHTMLForm( data )
+{
+    var params = [];
+
+    for( var name in data )
+    {
+        var value = data[ name ];
+        var param = encodeURIComponent( name ) + '=' + encodeURIComponent( value );
+
+        params.push( param );
+    }
+
+    return params.join( '&' ).replace( /%20/g, '+' );
+}
+function getParam() {
+    if (1 < document.location.search.length) {
+      // 最初の1文字 (?記号) を除いた文字列を取得する
+       var query = document.location.search.substring(1);
+  
+      // クエリの区切り記号 (&) で文字列を配列に分割する
+       var parameters = query.split('&');
+  
+      var result = new Object();
+      for (var i = 0; i < parameters.length; i++) {
+        // パラメータ名とパラメータ値に分割する
+         var element = parameters[i].split('=');
+  
+        var paramName = decodeURIComponent(element[0]);
+        var paramValue = decodeURIComponent(element[1]);
+  
+        // パラメータ名をキーとして連想配列に追加する
+         result[paramName] = decodeURIComponent(paramValue);
+      }
+      return result;
+    }
+    return null;
+  }
+  // db apiに社員番号をpostする
+function login(){
+
+    let content = document.getElementById("userName");
+    doApiGet(content.value);
 }

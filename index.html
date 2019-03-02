@@ -1,35 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JOB SCHEDULER / ジョブスケジュール管理ツール</title>
-    <meta name='author' content='q'>
-    <meta name='viewport' id="viewport" content='width=device-width,initial-scale=1,user-scalable=no' />
+    <title>Job Kanri</title>
+    <link rel="stylesheet" href="css/login.css" type="text/css" />
     <meta charset="utf-8">
-    <meta name=viewport content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico">
-    <!-- export/import設計を用いない場合、javascriptの表記順が重要 -->
-    <script src="js/holiday.js"></script>
+    <script src="js/jquery-min.js"></script>
     <script src="js/util.js"></script>
-    <script src="js/calculate.js"></script>
-    <script src="js/settingDate.js"></script>
-    <script src="js/initialize.js"></script>
-    <link rel="stylesheet" href="css/default.css" type="text/css" />
 </head>
 <body>
-    <div class="topbar" >
-        <div class='title'>JOB SCHEDULER</div>
-        <p>ジョブスケジュール管理ツール</p>
-        <p id="executeYmd"></p>
-        <table id="settingReference">
-        </table>
-    </div>
-    <div id="mainContent">
-        <table>
-            <thead id="theadId">
-            </thead>
-            <tbody id="tbodyId" contenteditable="true">
-            </tbody>
-        </table>
-    </div>
+    <header id="header"></header>
+    <form action="jobList.html" method="get">
+      <h1>Job Kanri</h1>
+        <input type="text" id="userName" name="userName" placeholder="Username" minlength="6" required />
+        <button onclick="login()">Login</button>
+    </form>
 </body>
 </html>

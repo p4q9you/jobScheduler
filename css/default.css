@@ -14,6 +14,36 @@
 }
 
 
+* {
+  margin:0;
+  padding:0;
+  border:none;
+  list-style:none;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#header div{
+color: #f4f4f4;
+text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.7);
+font-weight: 400;
+margin-bottom: 20px;
+}
+#header .top{
+  margin:20px auto;
+  background:#2a3644;
+  width:700px;
+  text-align:center;
+  padding:30px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+   -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+       border-radius: 6px;
+}
+
+
 #mainContent{
   top:250px;
   position:absolute;
