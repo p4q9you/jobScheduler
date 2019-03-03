@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Job Scheduler</title>
-    <meta name='viewport' id="viewport" content='width=device-width,initial-scale=1,user-scalable=no' />
-    <meta charset="utf-8">
+    <!-- 共通部 //Todo 部品化 -->
+    <title>Job Kanri</title>
     <link rel="icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <script src="js/checkBrows.js"></script>
+    <script src="js/jquery-min.js"></script>
+    <script src="js/util.js"></script>
+    
     <!-- export/import設計を用いない場合、javascriptの表記順が重要 -->
     <script src="js/holiday.js"></script>
-    <script src="js/util.js"></script>
-    <script src="js/calculate.js"></script>
     <script src="js/settingDate.js"></script>
-    <script src="js/initialize.js"></script>
+
+    <script src="js/calculate.js"></script>
+    <script src="js/initList.js"></script>
     <link rel="stylesheet" href="css/default.css" type="text/css" />
 </head>
 <body>
-    <div id="header" class="topbar" >
-        <div class="top">
-        <div class='title'>Job List</div>
-
-        <p id="executeYmd"></p>
-        <table id="settingReference">
-        </table>
-    </div>
-    <!--<div id="test">
-        <h1 id="targetH1"></h1>
-        <input type="submit" value="API" onclick="apiGet()">
-    </div>-->
-    </div>
+    <!-- 共通ヘッダ -->
+    <header id="header"></header>
     <div id="mainContent">
         <table>
             <thead id="theadId">

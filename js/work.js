@@ -1,13 +1,9 @@
 onload = () =>{
 
-    setLoginInfo();
     initTable();
 
 }
-function setLoginInfo(){
-    let loginInfo = getParam()["userName"] + "としてログインしています。";
-    document.getElementById("loginUser").innerText = loginInfo;
-}
+
 function initTable(){
     for (var i=0; i<10; i++) {
         var row = document.getElementById("settingTable").insertRow(-1);

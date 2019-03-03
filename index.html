@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- 共通部 //Todo 部品化 -->
     <title>Job Kanri</title>
-    <link rel="stylesheet" href="css/login.css" type="text/css" />
-    <meta charset="utf-8">
     <link rel="icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <script src="js/checkBrows.js"></script>
     <script src="js/jquery-min.js"></script>
     <script src="js/util.js"></script>
+    <!-- 固有部 -->
+    <link rel="stylesheet" href="css/login.css" type="text/css" />
+    <script src="js/login.js"></script>
 </head>
 <body>
+    <!-- 共通ヘッダ -->
     <header id="header"></header>
-    <form action="jobList.html" method="get">
+    <!-- ログイン時、管理ステータスに応じて遷移を振り分け-->
+    <form id="loginForm">
       <h1>Job Kanri</h1>
-        <input type="text" id="userName" name="userName" placeholder="Username" minlength="6" required />
-        <button onclick="login()">Login</button>
+        <input type="text" id="userName" name="userName" placeholder="123456" />
+        <button type="button" onclick="login()">Login</button>
     </form>
 </body>
 </html>

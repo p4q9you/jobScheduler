@@ -1,51 +1,35 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Job Scheduler</title>
-    <link rel="stylesheet" href="css/work.css" type="text/css" />
-    <meta charset="utf-8">
+    <!-- 共通部 //Todo 部品化 -->
+    <title>Job Kanri</title>
     <link rel="icon" href="favicon.ico">
-    <meta name="viewport" content="width=100%">
-    <!-- Job List分-->
-
+    <meta charset="utf-8">
+    <script src="js/checkBrows.js"></script>
+    <script src="js/jquery-min.js"></script>
+    <script src="js/util.js"></script>
+    <link rel="stylesheet" href="css/work.css" type="text/css" />
     <script src="js/calculate.js"></script>
     <script src="js/settingDate.js"></script>
-    <script src="js/initialize.js"></script>
     <script src="js/holiday.js"></script>
 
-    <script src="js/util.js"></script>
     <script src="js/work.js"></script>
 </head>
 
 <body>
     <header id="header"></header>
-    <div id="shellElement">
-        <div id="allElement">
-            <!--<form action="jobList.html" method="post">-->
-            <div id="workSetDiv">
-                <h1>Setting Work</h1>
-                <h5 id="loginUser"></h5>
-                <table id="settingTable"></table>
-                <!-- 開発時、typeをbuttonにすることでsubmitを回避する。type="button" -->
-                <!--<button onclick="postSettingValue()" >Next</button>-->
-                <button id="settingButton" onclick="changeForm()">Next</button>
-            </div>
-            <div id="jobListDiv" style="display:none">
+    <form id="workForm">
+    <table id="settingTarget">
+        <tr><td>day4</td><td><input></td></tr>
+        <tr><td>day2</td><td><input></td></tr>
+        <tr><td>day1</td><td><input></td></tr>
+        <tr><td>day0</td><td><input></td></tr>
+        <tr><td>target1</td><td><input></td></tr>
+        <tr><td>target2</td><td><input></td></tr>
+    </table>
+    <button type="button" onclick="">Set</button>
 
-                <p id="executeYmd"></p>
-
-                <div id="mainContent">
-                    <table>
-                        <thead id="theadId">
-                        </thead>
-                        <tbody id="tbodyId" contenteditable="true">
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+</body>
 </body>
 
 </html>

@@ -1,3 +1,16 @@
+/*!
+######################################################
+
+# INITLIST.JS
+
+#ASSET RELEASE: 1.0.0
+
+# BUILD DATE: 2019 3:4 
+
+# COPYRIGHT 2019 
+
+######################################################
+*/
 "use strict";
 
 /** 初期化処理 */
@@ -13,8 +26,8 @@ window.onload = function(){
     var presentMonth = date.getMonth() + 1; // javascriptのDate仕様
 
     // 処理日
-    document.getElementById("executeYmd").innerHTML 
-    = "処理日：" + presentYear + "年" + presentMonth + "月" + date.getDate() + "日";
+    //document.getElementById("executeYmd").innerHTML 
+    //= "処理日：" + presentYear + "年" + presentMonth + "月" + date.getDate() + "日";
 
     // 現在月から最終日取得
     var daysCountOfthisMonth = getLastDaysPresentDays(presentYear,presentMonth);
@@ -167,16 +180,16 @@ function addColorToHoliday(){
 // 基準日設定
 function settingReferrence(){
 
-    let settingReferenceElement = document.getElementById("settingReference");
+    //let settingReferenceElement = document.getElementById("settingReference");
     let trElement = document.createElement('tr');
-    for(let key in getSettingDate()){
+    for(let key in SettingDate.getSettingDate()){
         let counter = 1;
         let tdElement = document.createElement('td');
         tdElement.setAttribute("id","setting" + counter);
-        tdElement.innerText = formatByArr("{0} ： {1}",key,getSettingDate()[key]);
-        settingReferenceElement.appendChild(tdElement);
+        tdElement.innerText = formatByArr("{0} ： {1}",key,SettingDate.getSettingDate()[key]);
+        //settingReferenceElement.appendChild(tdElement);
     }
-    settingReferenceElement.appendChild(trElement);
+    //settingReferenceElement.appendChild(trElement);
 }
 
 // 入力値と基準日から日付を算出

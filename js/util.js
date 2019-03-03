@@ -1,6 +1,6 @@
 "use strict";
 
-// 共通ヘッダー
+// 共通ヘッダー読み込み
 $(function(){$("#header").load("./header-templete.html");});
       
 /**
@@ -16,7 +16,7 @@ const getAWeekList = () =>{
  * @param {*} calculateValue 
  */
 const getExecBusinessDay = (targetDay,calculateValue) =>{
-    return businessDayList[businessDayList.indexOf(targetDay)-calculateValue]
+    return getBusinessDayList()[getBusinessDayList().indexOf(targetDay)-calculateValue]
  }
 /**
  * 営業日一覧を取得
@@ -33,16 +33,14 @@ const getBusinessDayList = (targetYear,targetMonth) =>{
     return businessDayList;
 } 
 /**
- * 年月日から曜日を取得
- * @param {*} year 
- * @param {*} month 
- * @param {*} day 
+ * 対象月の日数を取得
+ * @param 年
+ * @param 月
+ * @return 対象月の日数
  */
-const getADayOfWeek = (year,month,day) =>{
-    //日曜が0、土曜日が6。曜日変換テーブル
-    var aDayOfWeeek = getAWeekList();
-    return aDayOfWeeek[new Date(year,month - 1,day).getDay()];
-}
+const getTargetMonthDayCount = (targetYear,targetMonth) =>{
+    return new Date(targetYear, targetMonth, 0).getDate();
+} 
 /**
  * 休日・祝日Listを取得
  * @param 年
@@ -55,16 +53,6 @@ const getAllHolidayList = (targetYear,targetMonth)=>{
     allHolidayList = Array.from( new Set(allHolidayList) );
     return allHolidayList;
 }
-
-/**
- * 対象月の日数を取得
- * @param 年
- * @param 月
- * @return 対象月の日数
- */
-const getTargetMonthDayCount = (targetYear,targetMonth) =>{
-    return new Date(targetYear, targetMonth, 0).getDate();
-} 
 /**
  * 休日List(日付のみ）を取得
  * @param 年
@@ -103,10 +91,19 @@ const getFormatedPublicHolidayList = (targetYear,targetMonth)=>{
  * @return 祝日オブジェクト
  */
 const getPublicHolidayList = () =>{return holidayList;}
+
 /**
- * 入力値取得
+ * 年月日から曜日を取得
+ * @param {*} year 
+ * @param {*} month 
+ * @param {*} day 
  */
-const getSettingDate = () => { return settingDate};
+const getADayOfWeek = (year,month,day) =>{
+    //日曜が0、土曜日が6。曜日変換テーブル
+    var aDayOfWeeek = getAWeekList();
+    return aDayOfWeeek[new Date(year,month - 1,day).getDay()];
+}
+
 /**
  * new Date(年、月、日)から祝日チェック
  * @param {*} date 

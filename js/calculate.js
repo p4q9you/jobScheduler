@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * 実行日を計算する
  * @param {*} element ex:date4-7 => 27-7 => 実行日は14日
@@ -14,9 +16,9 @@ const calculateExecDay = (element) => {
  */
 const replaceExecDay = (target) =>{
     let replaceResult;
-    for(let key in getSettingDate()){
+    for(let key in SettingDate.getSettingDate()){
         if(target.match(key)){
-            replaceResult =  target.replace(key,getSettingDate()[key]);
+            replaceResult =  target.replace(key,SettingDate.getSettingDate()[key]);
         }
     }
     return replaceResult;
