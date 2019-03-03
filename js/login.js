@@ -38,7 +38,7 @@
     // 翌月レコードが既登録
     // 回覧画面へ
 
-    window.location.href = "jobList.html";
+    window.location.href = "work.html";
 }
 // Todo ユーティリティとして共通化
 // 入力値チェック
