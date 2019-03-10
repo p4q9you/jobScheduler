@@ -23,15 +23,15 @@ body {
   font:15px/1.25 'Alef';
 }
 form {
-  margin:30px auto;
+  margin:40px auto;
   border: 2px solid black;
-  width:300px;
+  width:500px;
   text-align:center;
   padding:15px;
   -webkit-border-radius: 6px;
 }
 table {
-  margin:15px auto;
+  margin:3px auto;
 }
 /**
 div#shellElement{
@@ -63,8 +63,8 @@ div#workSetDiv{
 */
 input {
   display:block;
-  width:30px;
-  padding:1px;
+  width:40px;
+  padding:2px;
   margin-bottom:2px;
   -webkit-border-radius: 6px;
   outline:none;
@@ -97,7 +97,7 @@ button {
   position:relative;
   display:block;
   padding:17px;
-  width:270px;
+  width:470px;
   -webkit-border-radius: 6px;
   font-size:1.2em;
   background:#f26964;

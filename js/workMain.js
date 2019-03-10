@@ -31,14 +31,14 @@ const postSettingTarget = () => {
     xmlHttpRequest.onload = () => {
       console.log(xmlHttpRequest.status);
       console.log("success!");
-      window.location.href = "workMain.html"
+      window.location.href = "jobList.html"
     };
     xmlHttpRequest.onerror = () => {
       console.log(xmlHttpRequest.status);
       console.log("error!");
       alert("HTTP ERROR");
       // Todo テスト後消す。
-      window.location.href = "workMain.html"
+      window.location.href = "jobList.html"
     };
     xmlHttpRequest.send(jsonData);
     console.log("送信データ:"+jsonData)

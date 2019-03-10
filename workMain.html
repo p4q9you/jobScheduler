@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 共通部 //Todo 部品化 -->
+    <title>Job Kanri</title>
+    <link rel="icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <script src="js/checkBrows.js"></script>
+    <script src="js/jquery-min.js"></script>
+    <script src="js/util.js"></script>
+    <link rel="stylesheet" href="css/workMain.css" type="text/css" />
+    <script src="js/calculate.js"></script>
+    <script src="js/settingDate.js"></script>
+    <script src="js/holiday.js"></script>
+
+    <script src="js/workMain.js"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <form id="workForm">
+        <h1>Job Kanri</h1>
+        <table id="settingTarget">
+            <tr>
+                <td>縦1/横1</td>
+                <td>横2</td>
+                <td>横3</td>
+                <td>横4</td>
+                <td>横5</td>
+                <td>横6</td>
+                <td>横7</td>
+                <td>横8</td>
+                <td>横9</td>
+            </tr>
+            <tr>
+                <td>縦2</td>
+                <td><input id="shubetsu2_update2"></td>
+                <td><input id="shubetsu2_update3"></td>
+                <td><input id="shubetsu2_update4"></td>
+                <td><input id="shubetsu2_update5"></td>
+                <td><input id="shubetsu2_update6"></td>
+                <td><input id="shubetsu2_update7"></td>
+                <td><input id="shubetsu2_update8"></td>
+                <td><input id="shubetsu2_update9"></td>
+            </tr>
+            <tr>
+                <td>縦3</td>
+                <td><input id="shubetsu3_update2"></td>
+                <td><input id="shubetsu3_update3"></td>
+                <td><input id="shubetsu3_update4"></td>
+                <td><input id="shubetsu3_update5"></td>
+                <td><input id="shubetsu3_update6"></td>
+                <td><input id="shubetsu3_update7"></td>
+                <td><input id="shubetsu3_update8"></td>
+                <td><input id="shubetsu3_update9"></td>
+            </tr>
+            <tr>
+                <td>縦4</td>
+                <td><input id="shubetsu4_update2"></td>
+                <td><input id="shubetsu4_update3"></td>
+                <td><input id="shubetsu4_update4"></td>
+                <td><input id="shubetsu4_update5"></td>
+                <td><input id="shubetsu4_update6"></td>
+                <td><input id="shubetsu4_update7"></td>
+                <td><input id="shubetsu4_update8"></td>
+                <td><input id="shubetsu4_update9"></td>
+            </tr>
+            <tr>
+                <td>縦5</td>
+                <td><input id="shubetsu5_update2"></td>
+                <td><input id="shubetsu5_update3"></td>
+                <td><input id="shubetsu5_update4"></td>
+                <td><input id="shubetsu5_update5"></td>
+                <td><input id="shubetsu5_update6"></td>
+                <td><input id="shubetsu5_update7"></td>
+                <td><input id="shubetsu5_update8"></td>
+                <td><input id="shubetsu5_update9"></td>
+            </tr>
+            <tr>
+                <td>縦6</td>
+                <td><input id="shubetsu6_update2"></td>
+                <td><input id="shubetsu6_update3"></td>
+                <td><input id="shubetsu6_update4"></td>
+                <td><input id="shubetsu6_update5"></td>
+                <td><input id="shubetsu6_update6"></td>
+                <td><input id="shubetsu6_update7"></td>
+                <td><input id="shubetsu6_update8"></td>
+                <td><input id="shubetsu6_update9"></td>
+            </tr>
+        </table>
+        <table id="settingTarget2">
+                <tr>
+                    <td>縦1/横1</td>
+                    <td>横2</td>
+                    <td>横3</td>
+                    <td>横4</td>
+                    <td>横5</td>
+                    <td>横6</td>
+                    <td>横7</td>
+                    <td>横8</td>
+                    <td>横9</td>
+                </tr>
+                <tr>
+                    <td>縦2</td>
+                    <td><input id="shubetsu2_update2"></td>
+                    <td><input id="shubetsu2_update3"></td>
+                    <td><input id="shubetsu2_update4"></td>
+                    <td><input id="shubetsu2_update5"></td>
+                    <td><input id="shubetsu2_update6"></td>
+                    <td><input id="shubetsu2_update7"></td>
+                    <td><input id="shubetsu2_update8"></td>
+                    <td><input id="shubetsu2_update9"></td>
+                </tr>
+                <tr>
+                    <td>縦3</td>
+                    <td><input id="shubetsu3_update2"></td>
+                    <td><input id="shubetsu3_update3"></td>
+                    <td><input id="shubetsu3_update4"></td>
+                    <td><input id="shubetsu3_update5"></td>
+                    <td><input id="shubetsu3_update6"></td>
+                    <td><input id="shubetsu3_update7"></td>
+                    <td><input id="shubetsu3_update8"></td>
+                    <td><input id="shubetsu3_update9"></td>
+                </tr>
+                <tr>
+                    <td>縦4</td>
+                    <td><input id="shubetsu4_update2"></td>
+                    <td><input id="shubetsu4_update3"></td>
+                    <td><input id="shubetsu4_update4"></td>
+                    <td><input id="shubetsu4_update5"></td>
+                    <td><input id="shubetsu4_update6"></td>
+                    <td><input id="shubetsu4_update7"></td>
+                    <td><input id="shubetsu4_update8"></td>
+                    <td><input id="shubetsu4_update9"></td>
+                </tr>
+                <tr>
+                    <td>縦5</td>
+                    <td><input id="shubetsu5_update2"></td>
+                    <td><input id="shubetsu5_update3"></td>
+                    <td><input id="shubetsu5_update4"></td>
+                    <td><input id="shubetsu5_update5"></td>
+                    <td><input id="shubetsu5_update6"></td>
+                    <td><input id="shubetsu5_update7"></td>
+                    <td><input id="shubetsu5_update8"></td>
+                    <td><input id="shubetsu5_update9"></td>
+                </tr>
+                <tr>
+                    <td>縦6</td>
+                    <td><input id="shubetsu6_update2"></td>
+                    <td><input id="shubetsu6_update3"></td>
+                    <td><input id="shubetsu6_update4"></td>
+                    <td><input id="shubetsu6_update5"></td>
+                    <td><input id="shubetsu6_update6"></td>
+                    <td><input id="shubetsu6_update7"></td>
+                    <td><input id="shubetsu6_update8"></td>
+                    <td><input id="shubetsu6_update9"></td>
+                </tr>
+            </table>
+            <table id="settingTarget">
+                    <tr>
+                        <td>縦1/横1</td>
+                        <td>横2</td>
+                        <td>横3</td>
+                        <td>横4</td>
+                        <td>横5</td>
+                        <td>横6</td>
+                        <td>横7</td>
+                        <td>横8</td>
+                        <td>横9</td>
+                    </tr>
+                    <tr>
+                        <td>縦2</td>
+                        <td><input id="shubetsu2_update2"></td>
+                        <td><input id="shubetsu2_update3"></td>
+                        <td><input id="shubetsu2_update4"></td>
+                        <td><input id="shubetsu2_update5"></td>
+                        <td><input id="shubetsu2_update6"></td>
+                        <td><input id="shubetsu2_update7"></td>
+                        <td><input id="shubetsu2_update8"></td>
+                        <td><input id="shubetsu2_update9"></td>
+                    </tr>
+                </table>
+        <button type="button" onclick="postSettingTarget()">Set</button>
+    </form>
+</body>
+
+</html>
