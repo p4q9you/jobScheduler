@@ -38,7 +38,7 @@ table{
     overflow:hidden;
 }
 td,th{
-    border-bottom:2px solid black;
+    border-bottom:1px solid black;
 }
 td,th{
     padding:5px;
@@ -51,7 +51,7 @@ table tbody tr:last-child td{
     border-bottom: none;
 }
 th + th,td{
-    border-left:2px solid black;
+    border-left:1px solid black;
 }
 .cell{
   font-weight: bold;

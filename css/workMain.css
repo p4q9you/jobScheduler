@@ -68,7 +68,7 @@ input {
   margin-bottom:2px;
   -webkit-border-radius: 6px;
   outline:none;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 /*form > h1 {
   div#workSetDiv > h1 {
@@ -100,7 +100,7 @@ button {
   width:470px;
   -webkit-border-radius: 6px;
   font-size:1.2em;
-  background:#f26964;
+  background-color: #ea1010;
   color:#f4f4f4;
   box-shadow:0px 3px 0px #ab4b47;
   cursor:pointer;
