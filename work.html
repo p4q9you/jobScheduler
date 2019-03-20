@@ -8,38 +8,30 @@
     <script src="js/checkBrows.js"></script>
     <script src="js/jquery-min.js"></script>
     <script src="js/util.js"></script>
+    <link rel="stylesheet" href="css/common.css" type="text/css" />
     <link rel="stylesheet" href="css/work.css" type="text/css" />
     <script src="js/calculate.js"></script>
     <script src="js/settingDate.js"></script>
     <script src="js/holiday.js"></script>
-
     <script src="js/work.js"></script>
 </head>
-
 <body>
     <header id="header"></header>
-    <h1>Job Kanri - work</h1>
-    <form id="workForm">
-
+    <h1>JOB KANRI - WORK.HTML</h1>
+    <form id="workForm" class="form-work">
     <table id="settingTarget">
-        <tr><td>縦1 :</td><td><input id="1"></td></tr>
-        <tr><td>縦2 :</td><td><input id="2"></td></tr>
-        <tr><td>縦3 :</td><td><input id="3"></td></tr>
-        <tr><td>縦4 :</td><td><input id="4"></td></tr>
-        <tr><td>縦5 :</td><td><input id="5"></td></tr>
-        <tr><td>縦6 :</td><td><input id="6"></td></tr>
-        <tr><td>縦7 :</td><td><input id="7"></td></tr>
-        <tr><td>縦8 :</td><td><input id="8"></td></tr>
-        <tr><td>縦9 :</td><td><input id="9"></td></tr>
-        <tr><td>縦10 :</td><td><input id="10"></td></tr>
-        <tr><td>縦11 :</td><td><input id="11"></td></tr>
-        <tr><td>縦12 :</td><td><input id="12"></td></tr>
-        <tr><td>縦13 :</td><td><input id="13"></td></tr>
-        <tr><td>縦14 :</td><td><input id="14"></td></tr>
-        <tr><td>縦15 :</td><td><input id="15"></td></tr>
+        <tr><th>支払日０    :   </th><td><input id="1" class="input-design input-work" placeholder="16"></td></tr>
+        <tr><th>支払日１    :   </th><td><input id="2" class="input-design input-work" placeholder="17"></td></tr>
+        <tr><th>支払日２    :   </th><td><input id="3" class="input-design input-work" placeholder="18"></td></tr>
+        <tr><th>支払日４    :   </th><td><input id="4" class="input-design input-work" placeholder="27"></td></tr>
     </table>
-    <button type="button" onclick="postSettingTarget()">Set</button>
-
+    <hr class="hr-red-dot">
+    <table id="settingTarget2">
+        <tr><th>指定日１    :   </th><td><input id="5" class="input-design input-work" placeholder="3"></td></tr>
+        <tr><th>指定日２    :   </th><td><input id="6" class="input-design input-work" placeholder="4"></td></tr>
+        <tr><th>指定日３    :   </th><td><input id="7" class="input-design input-work" placeholder="5"></td></tr>
+     </table>
+    <button type="button" class="button-design" onclick="postSettingTarget()">次へ</button>
 </body>
 </body>
 

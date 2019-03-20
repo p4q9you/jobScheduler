@@ -6,6 +6,7 @@
     <title>Job Kanri</title>
     <link rel="icon" href="favicon.ico">
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/common.css" type="text/css" />
     <script src="js/checkBrows.js"></script>
     <script src="js/jquery-min.js"></script>
     <script src="js/util.js"></script>
@@ -19,23 +20,23 @@
 
 <body>
     <header id="header"></header>
-    <h1>Job Kanri - workMain</h1>
-    <form id="workForm">
+    <h1>JOB KANRI - WORKMAIN.HTML</h1>
+    <form id="workForm" class="form-work-main">
         <table id="settingTarget">
             <tr>
-                <td>縦1/横1</td>
-                <td>横2</td>
-                <td>横3</td>
-                <td>横4</td>
-                <td>横5</td>
-                <td>横6</td>
-                <td>横7</td>
-                <td>横8</td>
-                <td>横9</td>
+                <th>無</th>
+                <th>更新</th>
+                <th>依頼</th>
+                <th>結果</th>
+                <th>確定</th>
+                <th>来月</th>
+                <th>フラグ</th>
+                <th>予備</th>
+                <th>予備</th>
             </tr>
             <tr>
-                <td>縦2</td>
-                <td><input id="shubetsu2_update2"></td>
+                <th>Q１</th>
+                <td><input placeholder="123" id="shubetsu2_update2"></td>
                 <td><input id="shubetsu2_update3"></td>
                 <td><input id="shubetsu2_update4"></td>
                 <td><input id="shubetsu2_update5"></td>
@@ -45,7 +46,7 @@
                 <td><input id="shubetsu2_update9"></td>
             </tr>
             <tr>
-                <td>縦3</td>
+                <th>Q２</th>
                 <td><input id="shubetsu3_update2"></td>
                 <td><input id="shubetsu3_update3"></td>
                 <td><input id="shubetsu3_update4"></td>
@@ -56,7 +57,7 @@
                 <td><input id="shubetsu3_update9"></td>
             </tr>
             <tr>
-                <td>縦4</td>
+                <th>Q３</th>
                 <td><input id="shubetsu4_update2"></td>
                 <td><input id="shubetsu4_update3"></td>
                 <td><input id="shubetsu4_update4"></td>
@@ -67,7 +68,7 @@
                 <td><input id="shubetsu4_update9"></td>
             </tr>
             <tr>
-                <td>縦5</td>
+                <th>Q４</th>
                 <td><input id="shubetsu5_update2"></td>
                 <td><input id="shubetsu5_update3"></td>
                 <td><input id="shubetsu5_update4"></td>
@@ -78,7 +79,7 @@
                 <td><input id="shubetsu5_update9"></td>
             </tr>
             <tr>
-                <td>縦6</td>
+                <th>Q５</th>
                 <td><input id="shubetsu6_update2"></td>
                 <td><input id="shubetsu6_update3"></td>
                 <td><input id="shubetsu6_update4"></td>
@@ -89,20 +90,21 @@
                 <td><input id="shubetsu6_update9"></td>
             </tr>
         </table>
+        <hr class="hr-red-dot">
         <table id="settingTarget2">
                 <tr>
-                    <td>縦1/横1</td>
-                    <td>横2</td>
-                    <td>横3</td>
-                    <td>横4</td>
-                    <td>横5</td>
-                    <td>横6</td>
-                    <td>横7</td>
-                    <td>横8</td>
-                    <td>横9</td>
+                    <th>有</th>
+                    <th>更新</th>
+                    <th>依頼</th>
+                    <th>結果</th>
+                    <th>確定</th>
+                    <th>来月</th>
+                    <th>フラグ</th>
+                    <th>予備</th>
+                    <th>予備</th>
                 </tr>
                 <tr>
-                    <td>縦2</td>
+                    <th>C１</th>
                     <td><input id="shubetsu2_update2"></td>
                     <td><input id="shubetsu2_update3"></td>
                     <td><input id="shubetsu2_update4"></td>
@@ -113,7 +115,7 @@
                     <td><input id="shubetsu2_update9"></td>
                 </tr>
                 <tr>
-                    <td>縦3</td>
+                    <th>C２</th>
                     <td><input id="shubetsu3_update2"></td>
                     <td><input id="shubetsu3_update3"></td>
                     <td><input id="shubetsu3_update4"></td>
@@ -124,7 +126,7 @@
                     <td><input id="shubetsu3_update9"></td>
                 </tr>
                 <tr>
-                    <td>縦4</td>
+                    <th>C３</th>
                     <td><input id="shubetsu4_update2"></td>
                     <td><input id="shubetsu4_update3"></td>
                     <td><input id="shubetsu4_update4"></td>
@@ -135,7 +137,7 @@
                     <td><input id="shubetsu4_update9"></td>
                 </tr>
                 <tr>
-                    <td>縦5</td>
+                    <th>C４</th>
                     <td><input id="shubetsu5_update2"></td>
                     <td><input id="shubetsu5_update3"></td>
                     <td><input id="shubetsu5_update4"></td>
@@ -146,7 +148,7 @@
                     <td><input id="shubetsu5_update9"></td>
                 </tr>
                 <tr>
-                    <td>縦6</td>
+                    <th>C５</th>
                     <td><input id="shubetsu6_update2"></td>
                     <td><input id="shubetsu6_update3"></td>
                     <td><input id="shubetsu6_update4"></td>
@@ -157,20 +159,21 @@
                     <td><input id="shubetsu6_update9"></td>
                 </tr>
             </table>
+            <hr class="hr-red-dot">
             <table id="settingTarget">
                     <tr>
-                        <td>縦1/横1</td>
-                        <td>横2</td>
-                        <td>横3</td>
-                        <td>横4</td>
-                        <td>横5</td>
-                        <td>横6</td>
-                        <td>横7</td>
-                        <td>横8</td>
-                        <td>横9</td>
+                        <th>クレ</th>
+                        <th>更新</th>
+                        <th>依頼</th>
+                        <th>結果</th>
+                        <th>確定</th>
+                        <th>来月</th>
+                        <th>フラグ</th>
+                        <th>予備</th>
+                        <th>予備</th>
                     </tr>
                     <tr>
-                        <td>縦2</td>
+                        <th>クレ</th>
                         <td><input id="shubetsu2_update2"></td>
                         <td><input id="shubetsu2_update3"></td>
                         <td><input id="shubetsu2_update4"></td>
@@ -178,10 +181,10 @@
                         <td><input id="shubetsu2_update6"></td>
                         <td><input id="shubetsu2_update7"></td>
                         <td><input id="shubetsu2_update8"></td>
-                        <td><input id="shubetsu2_update9"></td>
+                        <td><input placeholder="123" id="shubetsu2_update9"></td>
                     </tr>
                 </table>
-        <button type="button" onclick="postSettingTarget()">Set</button>
+        <button type="button" class="button-work-main" onclick="postSettingTarget()">次へ</button>
     </form>
 </body>
 

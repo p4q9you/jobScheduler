@@ -1,7 +1,7 @@
 "use strict";
 
 // 共通ヘッダー読み込み
-$(function(){$("#header").load("./header-templete.html");});
+$(function(){$("#header").load("./header.html");});
       
 /**
  * 曜日リストを取得

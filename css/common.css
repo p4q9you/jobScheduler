@@ -1,0 +1,222 @@
+/**
+*
+*  共通CSS
+*  命名規則：要素名 - 名称
+*
+*
+**/
+
+/**
+######
+##
+## 共通デザイン
+##
+######
+**/
+
+/* フォント 共通 */
+* {
+    font-family: "ＭＳ Ｐゴシック";
+    font:10px;
+    margin:0;
+    padding:0;
+    border:none;
+    list-style:none;
+    -webkit-box-sizing: border-box;
+    box-sizing:border-box;
+    background-repeat:no-repeat;
+}
+/* input要素 共通デザイン*/
+input{
+    border: solid 1px #ebebeb;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 13px;
+    text-align: center;
+}
+input:focus {
+    background:rgba(248, 99, 53, 0.973);
+  }
+/* button要素 共通デザイン */
+button{
+    background-color: #d80a30;
+    position:relative;
+    display:block;
+    padding:17px;
+    width:270px;
+    border-radius: 0;
+    font-size:1.2em;
+    color:#f4f4f4;
+    box-shadow:0px 3px 0px #ab4b47;
+    cursor:pointer;
+}
+button:active {
+    top:3px;
+}
+/* a要素 共通デザイン*/
+a{
+    text-decoration: none;
+}
+/* form要素 */
+form {
+    margin:30px auto;
+    border: 2px solid black;
+    text-align:center;
+    padding:15px;
+    -webkit-border-radius: 0;
+  }
+
+/**
+######
+##
+## 汎用パーツ
+##
+######
+**/
+
+/** hr要素 赤い点線 */
+.hr-red-dot{
+    border:none;
+    border-top:dashed 1px #d80a30;
+    height:1px;
+    color:#FFFFFF;
+    width:100%;
+}
+
+/**
+######
+##
+## ヘッダーパーツ
+##
+######
+**/
+
+/* ロゴ */
+.nav-logo{
+    display: flex;
+    position: relative;
+    height:55px;}
+.div-logo{width:180px;}
+.main-logo{
+    width: 100px;
+    height: 100px;
+    background-image: url(logo.png);
+    background-size: 60%;
+    margin-left: 2px;
+}
+/* メニュー*/
+.nav-list{
+    display: -webkit-flex;
+    text-align: left;
+    margin: 31px 35% 0px 20%;
+}
+.li-gmenu{
+    margin: 3px;
+    padding: 5px 50px;
+    background-color: #d80a30;
+    color: #fff;
+}
+
+
+/**
+######
+##
+## bk 
+##
+######
+**/
+
+/**
+div#shellElement{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+div#allElement {
+  transform: scale(1.0);
+
+}
+
+
+div#workSetDiv{
+  margin:20px auto;
+  background:#2a3644;
+  width:550px;
+  text-align:center;
+  padding:40px;
+  transform: translate(-50%, -50%);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+   -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+       border-radius: 6px;
+
+}
+*/
+
+/*form > h1 {
+  div#workSetDiv > h1 {
+
+  color:#f4f4f4;
+  text-shadow:1px 1px 0px rgba(0, 0, 0, 0.7);
+  font-weight:400;
+  margin-bottom:20px;
+}
+/*form > h5 {
+  div#workSetDiv > h5 {
+  color:#f4f4f4;
+  text-shadow:1px 1px 0px rgba(0, 0, 0, 0.7);
+  font-weight:400;
+  margin-bottom:20px;
+}
+*/
+
+
+
+
+
+/* jobList css
+div#jobListDiv{
+  margin:20px auto;
+  width:100%;
+  text-align:center;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+   -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+       border-radius: 6px;
+}
+#jobListDiv table{
+  margin:0 auto;
+  border-radius:10px;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border:1px solid #666;
+  border-spacing: 0;
+  overflow:hidden;
+}
+#jobListDiv td,th{
+  border-bottom:1px solid #666;
+}
+#jobListDiv td,th{
+  padding:10px;
+}
+#jobListDiv th{
+background:#EFEFEF;
+}
+#jobListDiv table tbody tr:last-child th,
+#jobListDiv table tbody tr:last-child td{
+  border-bottom: none;
+}
+#jobListDiv th + th,#jobListDiv td{
+  border-left:1px solid #666;
+}
+#jobListDiv .cell{
+font-weight: bold;
+}
+#jobListDiv input{
+width:50px;
+}
+
+*/

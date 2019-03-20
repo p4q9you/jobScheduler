@@ -170,7 +170,7 @@ function addColorToHoliday(){
     for(let element of tdList){
         for(let target of targetColumnList){
             if(element.getAttribute("id") === target){
-                element.style.backgroundColor = "red";
+                element.style.backgroundColor = "#d80a30";
             }
         }
     }

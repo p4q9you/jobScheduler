@@ -1,0 +1,61 @@
+/**
+*
+*  JOB LIST CSS
+*  命名規則：要素名 - 名称
+*
+*
+**/
+@media print{ 
+    .topbar {
+        background: #fff;
+        width:100%;
+}}
+@media screen{ 
+    .topbar {
+      background: #fff;
+      position: fixed;
+      z-index: 1000;
+      width:100%;
+    }
+
+}
+/* body扱いのdiv*/
+#mainContent{
+  top:250px;
+  position:absolute;
+  width:100%;
+  font-size:15px;
+}
+
+table{
+    margin:0 auto;
+    border-radius:10px;
+    -webkit-border-radius:0px;
+    border: 2px solid black;
+    border-spacing: 0;
+    overflow:hidden;
+}
+td,th{
+    border-bottom:1px solid black;
+}
+td,th{
+    padding:5px;
+}
+th{
+  background:#EFEFEF;
+}
+table tbody tr:last-child th,
+table tbody tr:last-child td{
+    border-bottom: none;
+}
+th + th,td{
+    border-left:1px solid black;
+}
+.cell{
+  font-weight: bold;
+}
+input{
+  width:50px;
+}
+
+

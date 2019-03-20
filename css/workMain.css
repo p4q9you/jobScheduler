@@ -1,157 +1,24 @@
-/*!
-######################################################
-
-# WORK.CSS
-
-# ASSET RELEASE: 1.0.0
-
-# BUILD DATE: 2019 3:4 
-
-# COPYRIGHT 2019 
-
-######################################################
-*/
-* {
-  margin:0;
-  padding:0;
-  border:none;
-  list-style:none;
-  -webkit-box-sizing: border-box;
-}
-
-body {
-  font:15px/1.25 'Alef';
-}
-form {
-  margin:40px auto;
-  border: 2px solid black;
+/**
+*
+*  WORKMAIN.HTML CSS
+*  命名規則：要素名 - 名称
+*
+*
+**/
+.form-work-main {  
   width:500px;
-  text-align:center;
-  padding:15px;
-  -webkit-border-radius: 6px;
+
 }
 table {
   margin:3px auto;
 }
-/**
-div#shellElement{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-div#allElement {
-  transform: scale(1.0);
 
-}
-
-
-div#workSetDiv{
-  margin:20px auto;
-  background:#2a3644;
-  width:550px;
-  text-align:center;
-  padding:40px;
-  transform: translate(-50%, -50%);
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-   -ms-border-radius: 6px;
-    -o-border-radius: 6px;
-       border-radius: 6px;
-
-}
-*/
 input {
   display:block;
   width:40px;
   padding:2px;
   margin-bottom:2px;
-  -webkit-border-radius: 6px;
-  outline:none;
-  border: 1px solid black;
 }
-/*form > h1 {
-  div#workSetDiv > h1 {
-
-  color:#f4f4f4;
-  text-shadow:1px 1px 0px rgba(0, 0, 0, 0.7);
-  font-weight:400;
-  margin-bottom:20px;
-}
-/*form > h5 {
-  div#workSetDiv > h5 {
-  color:#f4f4f4;
-  text-shadow:1px 1px 0px rgba(0, 0, 0, 0.7);
-  font-weight:400;
-  margin-bottom:20px;
-}
-*/
-
-
-input:focus {
-  background:rgba(248, 99, 53, 0.973);
-}
-
-
-button {
-  position:relative;
-  display:block;
-  padding:17px;
+.button-work-main {
   width:470px;
-  -webkit-border-radius: 6px;
-  font-size:1.2em;
-  background-color: #ea1010;
-  color:#f4f4f4;
-  box-shadow:0px 3px 0px #ab4b47;
-  cursor:pointer;
 }
-
-button:active {
-  top:3px;
-}
-
-
-/* jobList css
-div#jobListDiv{
-  margin:20px auto;
-  width:100%;
-  text-align:center;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-   -ms-border-radius: 6px;
-    -o-border-radius: 6px;
-       border-radius: 6px;
-}
-#jobListDiv table{
-  margin:0 auto;
-  border-radius:10px;
-  -webkit-border-radius:10px;
-  -moz-border-radius:10px;
-  border:1px solid #666;
-  border-spacing: 0;
-  overflow:hidden;
-}
-#jobListDiv td,th{
-  border-bottom:1px solid #666;
-}
-#jobListDiv td,th{
-  padding:10px;
-}
-#jobListDiv th{
-background:#EFEFEF;
-}
-#jobListDiv table tbody tr:last-child th,
-#jobListDiv table tbody tr:last-child td{
-  border-bottom: none;
-}
-#jobListDiv th + th,#jobListDiv td{
-  border-left:1px solid #666;
-}
-#jobListDiv .cell{
-font-weight: bold;
-}
-#jobListDiv input{
-width:50px;
-}
-
-*/
